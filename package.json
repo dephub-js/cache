@@ -1,0 +1,78 @@
+{
+  "name": "@dephub/cache",
+  "type": "module",
+  "version": "3.0.0",
+  "description": "Tiny, type-safe cache with in-memory, file, and browser persistence backends.",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "bin": {
+    "cache": "./dist/cli.js"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm lint && pnpm check-types && pnpm build",
+    "release": "pnpm publish",
+    "docs": "lineo md 'src/**/*.ts' --outFile code.md --outDir temp",
+    "check-types": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint . --fix --max-warnings 0",
+    "fmt": "prettier --write .",
+    "clean": "rm -rf dist",
+    "build": "vite build",
+    "dev": "vite build -w --mode development"
+  },
+  "keywords": [
+    "cache",
+    "storage",
+    "persistent",
+    "file",
+    "json",
+    "key-value",
+    "typescript",
+    "nodejs",
+    "cli",
+    "dephub"
+  ],
+  "author": {
+    "name": "Estarlin R",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dephub-js/cache#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dephub-js/cache.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dephub-js/cache/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "dependencies": {
+    "@dephub/command": "^1.0.1",
+    "@dephub/logger": "^1.2.0",
+    "@dephub/path": "^1.0.2",
+    "@dephub/read": "^1.0.2",
+    "@dephub/write": "^1.0.2"
+  },
+  "devDependencies": {
+    "@dephub/eslint-ts": "^1.0.2",
+    "@dephub/glob": "^1.0.2",
+    "@dephub/path": "^1.0.0",
+    "@types/node": "^25.3.3",
+    "eslint": "^10.0.2",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
