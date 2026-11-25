@@ -1,5 +1,5 @@
-export { Disk } from './core/disk.js';
-export { CacheError as Error } from './core/error.js';
-export { Memory } from './core/memory.js';
-export { Storage } from './core/storage.js';
-export type { CacheValue as Value } from './core/types.js';
+export { Disk } from './core/disk.ts';
+export { CacheError } from './core/error.ts';
+export { Memory } from './core/memory.ts';
+export { Storage } from './core/storage.ts';
+export type { CacheValue } from './core/types.ts';

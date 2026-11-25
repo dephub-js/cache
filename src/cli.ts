@@ -3,14 +3,12 @@
 import { Command, CommandError } from '@dephub/command';
 import { logger } from '@dephub/logger';
 
-import { description, name, version } from '@/utils/pkg.js';
-
-import { Disk } from './index.js';
+import { Disk } from './index.ts';
 
 const cmd = new Command()
-  .name(name.split('/')[1] ?? 'cache')
-  .version(version)
-  .description(description);
+  .name(__PKG_NAME__.split('/')[1])
+  .version(__PKG_VERSION__)
+  .description(__PKG_DESCRIPTION__);
 
 cmd
   .command('get', 'Get value from cache')

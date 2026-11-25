@@ -1,7 +1,7 @@
 import type { CacheValue } from './types.js';
 
 import { CacheError } from './error.js';
-export const CACHE = Symbol('cache');
+export const CACHE = Symbol('CACHE');
 
 /**
  * In-memory cache for primitive values (`string | number | boolean`).
